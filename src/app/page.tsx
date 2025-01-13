@@ -2,7 +2,6 @@
 import About from '@/components/about';
 import CardContainer from '@/components/common/card-container';
 import KiranCk from '@/components/common/kiran-ck-LSNJ';
-import ZX7Speaker from '@/components/common/Zx7Speaker';
 import ZXkSpeaker from '@/components/common/ZxkSpeaker';
 import { Footer } from '@/components/footer';
 import Hero from '@/components/hero';
