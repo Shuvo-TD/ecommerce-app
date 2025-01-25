@@ -37,7 +37,7 @@ const Nav: React.FC = () => {
           </li>
           <li>
             <Link
-              href="/earphone"
+              href="/earphones"
               className="text-gray-600 text-xl font-semibold hover:text-gray-900"
             >
               Earphones
