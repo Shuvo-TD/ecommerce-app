@@ -45,6 +45,9 @@ const Watches = () => {
       ) : (
         products.map((item) => <ProductContainer item={item} key={item.id} />)
       )}
+      <h3 className="text-center text-3xl font-semibold mt-20">
+        You may also like
+      </h3>
       <CardContainer />
       <div className="items-center mt-20  mx-auto">
         <About />
