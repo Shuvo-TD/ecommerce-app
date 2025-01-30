@@ -4,7 +4,7 @@ import Nav from '@/components/nav';
 import ProductHeader from '@/components/common/product-header';
 import ProductContainer from '@/components/common/product-container';
 import CardContainer from '@/components/common/card-container';
-import About from '@/components/common/about';
+import About from '@/components/about';
 import { Footer } from '@/components/footer';
 import { APIProduct } from '@/types';
 
@@ -36,7 +36,7 @@ const Watches = () => {
   const products = data;
 
   return (
-    <div>
+    <div className="flex flex-col mx-auto">
       <Nav />
       <ProductHeader category={category} />
 
@@ -45,13 +45,11 @@ const Watches = () => {
       ) : (
         products.map((item) => <ProductContainer item={item} key={item.id} />)
       )}
-
-      <div className="container mx-auto mb-28">
-        <CardContainer />
-      </div>
-      <div>
+      <CardContainer />
+      <div className="items-center mt-20  mx-auto">
         <About />
       </div>
+
       <Footer />
     </div>
   );
