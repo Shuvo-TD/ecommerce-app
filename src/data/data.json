@@ -463,7 +463,7 @@
     "image": {
       "mobile": "./assets/product-xx99-mark-one-headphones/mobile/image-product.jpg",
       "tablet": "./assets/product-xx99-mark-one-headphones/tablet/image-product.jpg",
-      "desktop": "./assets/product-xx99-mark-one-headphones/desktop/image-product.jpg"
+      "desktop": "/images/kiran-ck.png"
     },
     "category": "headphones",
     "new": false,
@@ -542,7 +542,7 @@
     "image": {
       "mobile": "./assets/product-xx99-mark-two-headphones/mobile/image-product.jpg",
       "tablet": "./assets/product-xx99-mark-two-headphones/tablet/image-product.jpg",
-      "desktop": "./assets/product-xx99-mark-two-headphones/desktop/image-product.jpg"
+      "desktop": "/image-xx99-mark-two-headphones.jpg"
     },
     "category": "headphones",
     "new": true,
