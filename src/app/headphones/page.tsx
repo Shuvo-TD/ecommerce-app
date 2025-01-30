@@ -10,9 +10,10 @@ import ProductContainer from '@/components/common/product-container';
 import { APIProduct } from '@/types';
 
 const Headphones: NextPage = () => {
-  const category = 'earphones';
+  const category = 'headphones';
   const [data, setData] = useState<APIProduct[]>([]);
   const [isLoading, setLoading] = useState(true);
+  const products = Array.from(new Set(data));
 
   useEffect(() => {
     fetch('/api/data')
@@ -31,17 +32,19 @@ const Headphones: NextPage = () => {
   }, [category]);
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return <p className="text-center text-lg font-semibold">Loading...</p>;
   }
 
   return (
-    <div className="flex flex-col mx-auto">
+    <div>
       <Nav />
       <ProductHeader category={category} />
 
-      {data.map((item) => {
-        return <ProductContainer item={item} key={item.id} />;
-      })}
+      <div className="container mx-auto px-4">
+        {products.map((item) => (
+          <ProductContainer item={item} key={item.id} />
+        ))}
+      </div>
       <h3 className="text-center text-3xl font-semibold mt-20">
         You may also like
       </h3>

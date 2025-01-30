@@ -15,7 +15,7 @@ const Summary = () => {
   };
 
   return (
-    <div className="bg-white p-8 my-16 ml-8 w-full md:w-1/4 h-auto">
+    <div className="bg-white p-4 md:p-8 my-8 md:my-16 w-full md:w-1/4 mx-auto">
       <h1 className="text-2xl font-extrabold uppercase tracking-wide mb-8">
         Summary
       </h1>

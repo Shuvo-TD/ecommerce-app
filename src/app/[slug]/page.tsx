@@ -7,92 +7,8 @@ import { APIProduct } from '@/types';
 import Recommendations from '@/components/common/recommendation';
 
 const ProductDetails = ({ params }: { params: { slug: string } }) => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [_data, setData] = useState<APIProduct[]>([]);
   const [isLoading, setLoading] = useState(true);
-  const [product, setProduct] = useState<APIProduct>({
-    id: 0,
-    slug: '',
-    name: '',
-    image: {
-      mobile: '',
-      tablet: '',
-      desktop: '',
-    },
-    category: '',
-    new: true,
-    price: 0,
-    description: '',
-    features: '',
-    includes: [
-      {
-        quantity: 0,
-        item: '',
-      },
-      {
-        quantity: 0,
-        item: '',
-      },
-      {
-        quantity: 0,
-        item: '',
-      },
-      {
-        quantity: 0,
-        item: '',
-      },
-      {
-        quantity: 0,
-        item: '',
-      },
-    ],
-    gallery: {
-      first: {
-        mobile: '',
-        tablet: '',
-        desktop: '',
-      },
-      second: {
-        mobile: '',
-        tablet: '',
-        desktop: '',
-      },
-      third: {
-        mobile: '',
-        tablet: '',
-        desktop: '',
-      },
-    },
-    others: [
-      {
-        slug: '',
-        name: '',
-        image: {
-          mobile: '',
-          tablet: '',
-          desktop: '',
-        },
-      },
-      {
-        slug: '',
-        name: '',
-        image: {
-          mobile: '',
-          tablet: '',
-          desktop: '',
-        },
-      },
-      {
-        slug: '',
-        name: '',
-        image: {
-          mobile: '',
-          tablet: '',
-          desktop: '',
-        },
-      },
-    ],
-  });
+  const [product, setProduct] = useState<APIProduct>({} as APIProduct);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -120,16 +36,27 @@ const ProductDetails = ({ params }: { params: { slug: string } }) => {
   }, [params]);
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#d87d4a]"></div>
+      </div>
+    );
   }
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Nav />
-      <Product product={product} />
-      <Recommendations recommendations={product.others} />
+
+      <main className="flex-1">
+        <div className="container mx-auto px-4 py-8">
+          <Product product={product} />
+
+          <Recommendations recommendations={product.others} />
+        </div>
+      </main>
+
       <Footer />
-    </>
+    </div>
   );
 };
 

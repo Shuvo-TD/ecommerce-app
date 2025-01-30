@@ -22,7 +22,7 @@ const Card = ({ category }: Props) => {
       <h4 className="uppercase text-xl  font-medium"> {category}</h4>
       <Link
         href={`/${category}`}
-        className="text-gray-600 hover:text-gray-800 transition duration-300"
+        className="w-15 mt-4 py-3 px-6 bg-[#d87d4a] text-white text-lg font-semibold rounded-lg transition-transform duration-200 ease-in-out transform hover:scale-105 hover:bg-[#b76c34] active:scale-95 focus:outline-none"
       >
         {' '}
         SHOP
