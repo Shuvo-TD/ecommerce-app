@@ -3,9 +3,9 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div className="mx-auto py-32">
-      <div className="flex flex-row gap-28 items-center justify-center space-x-16">
-        <div className="flex flex-col justify-center max-w-lg">
+    <div className="container mx-auto px-4 py-32">
+      <div className="flex flex-col lg:flex-row gap-16 items-center justify-center">
+        <div className="flex flex-col justify-center max-w-lg text-center lg:text-left">
           <h4 className="text-3xl font-semibold mb-6">
             BRINGING YOU THE <span className="text-[#d87d4a]">BEST</span> AUDIO
             GEAR
@@ -21,8 +21,14 @@ const About = () => {
             that fits your needs.
           </p>
         </div>
-        <div className="w-full">
-          <Image src="/about.jpg" alt="about-image" height={700} width={800} />
+        <div className="w-full max-w-2xl">
+          <Image
+            src="/about.jpg"
+            alt="about-image"
+            height={700}
+            width={800}
+            className="rounded-lg"
+          />
         </div>
       </div>
     </div>

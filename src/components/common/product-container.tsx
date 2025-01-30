@@ -11,19 +11,25 @@ const ProductContainer = ({ item }: Props) => {
   const isEven = item.id % 2 === 0;
 
   return (
-    <div className="container items-center justify-center mx-auto px-10">
-      <div className="flex items-center mx-auto justify-between p-40">
+    <div className="mx-auto px-4 py-16 lg:py-24">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16">
         {isEven && (
-          <ProductItemImage src={item.image.desktop} name={item.name} />
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
+            <ProductItemImage src={item.image.desktop} name={item.name} />
+          </div>
         )}
-        <ProductDescription
-          isNew={item.new}
-          name={item.name}
-          description={item.description}
-          slug={item.slug}
-        />
+        <div className="w-full lg:w-1/2 text-center lg:text-left flex justify-center lg:justify-start">
+          <ProductDescription
+            isNew={item.new}
+            name={item.name}
+            description={item.description}
+            slug={item.slug}
+          />
+        </div>
         {!isEven && (
-          <ProductItemImage src={item.image.desktop} name={item.name} />
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
+            <ProductItemImage src={item.image.desktop} name={item.name} />
+          </div>
         )}
       </div>
     </div>
