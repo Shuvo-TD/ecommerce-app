@@ -34,8 +34,6 @@ const Headphones: NextPage = () => {
     return <p>Loading...</p>;
   }
 
-  console.log('product is ', data);
-
   return (
     <div className="flex flex-col mx-auto">
       <Nav />

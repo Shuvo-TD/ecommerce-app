@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import data from '@/data/data.json'; // Adjust path if needed
+import data from '@/data/data.json';
 
 interface Params {
   slug: string;

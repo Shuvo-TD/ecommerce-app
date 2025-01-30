@@ -4,6 +4,7 @@ import Nav from '@/components/nav';
 import Product from '@/components/common/product';
 import { Footer } from '@/components/footer';
 import { APIProduct } from '@/types';
+import Recommendations from '@/components/common/recommendation';
 
 const ProductDetails = ({ params }: { params: { slug: string } }) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -126,6 +127,7 @@ const ProductDetails = ({ params }: { params: { slug: string } }) => {
     <>
       <Nav />
       <Product product={product} />
+      <Recommendations recommendations={product.others} />
       <Footer />
     </>
   );
