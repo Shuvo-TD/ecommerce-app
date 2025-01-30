@@ -29,18 +29,10 @@ const Nav: React.FC = () => {
           </li>
           <li>
             <Link
-              href="/watches"
-              className="text-gray-600 text-md font-semibold hover:text-gray-900"
-            >
-              EARPHONES
-            </Link>
-          </li>
-          <li>
-            <Link
               href="/earphones"
               className="text-gray-600 text-md font-semibold hover:text-gray-900"
             >
-              WATCHES
+              EARPHONES
             </Link>
           </li>
           <li>
@@ -49,6 +41,14 @@ const Nav: React.FC = () => {
               className="text-gray-600 text-md font-semibold hover:text-gray-900"
             >
               HEADPHONES
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/watches"
+              className="text-gray-600 text-md font-semibold hover:text-gray-900"
+            >
+              WATCHES
             </Link>
           </li>
         </ul>

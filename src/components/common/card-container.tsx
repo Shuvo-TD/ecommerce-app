@@ -3,14 +3,18 @@ import Card from './card';
 
 const CardContainer = () => {
   return (
-    <div className="mx-48">
+    <div className=" flex flex-row justify-center">
       {' '}
       {/* Margin top and bottom */}
-      <div className="mx-auto flex justify-between items-center">
+      <div className="flex gap-4 items-center justify-center mx-auto ">
         {' '}
         {/* Container and flexbox */}
-        <Card category="bruno-van-der-preview" />
-        <Card category="pat-taylor-preview" />
+        <div>
+          <Card category="bruno-van-der-preview" />
+        </div>
+        <div>
+          <Card category="pat-taylor-preview" />
+        </div>
         <div className=" p-4 mt-28">
           <Card category="headphones" />
         </div>
