@@ -106,8 +106,8 @@ const Nav: React.FC = () => {
               className="inline-block"
             />
             {cart.length > 0 && (
-              <span className="absolute -top-2 right-0 bg-red-500 text-white text-xs rounded-full px-2">
-                {cart.length}
+              <span className="absolute  right-0 left-6 text-gray-800 text-sm rounded-full p-2">
+                ({cart.length})
               </span>
             )}
           </button>
