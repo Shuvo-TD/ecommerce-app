@@ -6,19 +6,16 @@ import { Footer } from '@/components/footer';
 import { APIProduct } from '@/types';
 import Recommendations from '@/components/common/recommendation';
 
-const ProductDetails = ({ params }: { params: { slug: string } }) => {
+const ProductDetails = ({ params }: { params: Promise<{ slug: string }> }) => {
   const [isLoading, setLoading] = useState(true);
   const [product, setProduct] = useState<APIProduct>({} as APIProduct);
 
   useEffect(() => {
     const fetchData = async () => {
-      const { slug } = await params;
+      const slug = (await params).slug;
       try {
         const response = await fetch(`/api/data`);
-        if (!response.ok) {
-          console.error('Error fetching product:', response.statusText);
-          return;
-        }
+        if (!response.ok) throw new Error('Failed to fetch');
 
         const data = await response.json();
         const matchingProduct = data.find(
