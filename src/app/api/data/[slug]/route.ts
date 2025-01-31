@@ -1,11 +1,7 @@
 import { NextResponse } from 'next/server';
 import data from '@/data/data.json';
 
-interface Params {
-  slug: string;
-}
-
-export async function GET(request: Request, { params }: { params: Params }) {
+export async function GET(request: Request,  {params }: { params: Promise<{ slug: string }> }) {
   const { slug } = (await params) || {};
   if (!slug) {
     return new NextResponse(JSON.stringify({ message: 'Product not found' }), {
