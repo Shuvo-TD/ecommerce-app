@@ -26,26 +26,17 @@ export const Footer: React.FC = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/about"
-                    className="hover:underline font-bold text-lg"
-                  >
+                  <Link href="" className="hover:underline font-bold text-lg">
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/services"
-                    className="hover:underline font-bold text-lg"
-                  >
+                  <Link href="" className="hover:underline font-bold text-lg">
                     Services
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/contact"
-                    className="hover:underline font-bold text-lg"
-                  >
+                  <Link href="" className="hover:underline font-bold text-lg">
                     Contact
                   </Link>
                 </li>
@@ -53,7 +44,11 @@ export const Footer: React.FC = () => {
             </nav>
             {/* Social Media Icons */}
             <div className="flex gap-4 text-gray-400 text-lg">
-              <Link href="https://facebook.com" aria-label="Facebook">
+              <Link
+                href="https://facebook.com"
+                target="_blank"
+                aria-label="Facebook"
+              >
                 <Image
                   src="/icons/facebook.svg"
                   alt="Facebook"
@@ -61,7 +56,11 @@ export const Footer: React.FC = () => {
                   height={24}
                 />
               </Link>
-              <Link href="https://twitter.com" aria-label="Twitter">
+              <Link
+                href="https://twitter.com"
+                target="_blank"
+                aria-label="Twitter"
+              >
                 <Image
                   src="/icons/twitter.svg"
                   alt="Twitter"
@@ -69,7 +68,11 @@ export const Footer: React.FC = () => {
                   height={24}
                 />
               </Link>
-              <Link href="https://instagram.com" aria-label="Instagram">
+              <Link
+                href="https://instagram.com"
+                target="_blank"
+                aria-label="Instagram"
+              >
                 <Image
                   src="/icons/instagram.svg"
                   alt="Instagram"
